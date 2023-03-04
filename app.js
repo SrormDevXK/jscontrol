@@ -17,7 +17,7 @@ const MyModel = require('./models/Model')
 /**
  * Статичная папка
  */
-app.use('/', express.static('static'))
+app.use('/static', express.static('static'))
 
 /**
  * Синхронизация сессии и MongoDB
@@ -63,11 +63,11 @@ app.use(sayUserBody)
 app.get('/', sayMyMiddle, (req, res) => {
     res.render('index')
 })
-app.get('/page1', (req, res) => {
-    res.render('page1')
+app.get('/auth', (req, res) => {
+    res.render('auth')
 })
-app.get('/page2', (req, res) => {
-    res.render('page2')
+app.get('/tickets', (req, res) => {
+    res.render('tickets')
 })
 
 

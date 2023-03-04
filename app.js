@@ -14,6 +14,10 @@ const DATABASE_NAME = "node_project"
  */
 const MyModel = require('./models/Model')
 
+/**
+ * Статичная папка
+ */
+app.use('/', express.static('static'))
 
 /**
  * Синхронизация сессии и MongoDB

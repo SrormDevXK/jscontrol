@@ -17,7 +17,7 @@ const MyModel = require('./models/Model')
 /**
  * Статичная папка
  */
-app.use('/static', express.static('static'))
+app.use(express.static('static'))
 
 /**
  * Синхронизация сессии и MongoDB
